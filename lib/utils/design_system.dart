@@ -27,88 +27,88 @@ class MyColors {
 
 class MyTextStyles {
   static TextStyle headings1 = GoogleFonts.manrope(
-    fontSize: 48,
+    fontSize: 48.0,
     fontWeight: FontWeight.w600,
   );
   static TextStyle headings2 = GoogleFonts.manrope(
-    fontSize: 40,
+    fontSize: 40.0,
     fontWeight: FontWeight.w600,
   );
   static TextStyle headings3 = GoogleFonts.manrope(
-    fontSize: 36,
+    fontSize: 36.0,
     fontWeight: FontWeight.w600,
   );
   static TextStyle headings4 = GoogleFonts.manrope(
-    fontSize: 30,
+    fontSize: 30.0,
     fontWeight: FontWeight.w600,
   );
   static TextStyle headings5 = GoogleFonts.manrope(
-    fontSize: 24,
+    fontSize: 24.0,
     fontWeight: FontWeight.w600,
   );
 
   static TextStyle subtitle1 = GoogleFonts.manrope(
-    fontSize: 20,
+    fontSize: 20.0,
     fontWeight: FontWeight.w600,
   );
   static TextStyle subtitle2 = GoogleFonts.manrope(
-    fontSize: 18,
+    fontSize: 18.0,
     fontWeight: FontWeight.w600,
   );
 
   static TextStyle paragraph1 = GoogleFonts.roboto(
-    fontSize: 16,
+    fontSize: 16.0,
     fontWeight: FontWeight.w400,
   );
   static TextStyle paragraph2 = GoogleFonts.roboto(
-    fontSize: 14,
+    fontSize: 14.0,
     fontWeight: FontWeight.w500,
   );
   static TextStyle paragraph3 = GoogleFonts.manrope(
-    fontSize: 14,
+    fontSize: 14.0,
     fontWeight: FontWeight.w700,
   );
   static TextStyle quotes = GoogleFonts.roboto(
-    fontSize: 18,
+    fontSize: 18.0,
     fontStyle: FontStyle.italic,
   );
 
   static TextStyle label = GoogleFonts.manrope(
-    fontSize: 12,
+    fontSize: 12.0,
     fontWeight: FontWeight.w500,
   );
   static TextStyle placeholder = GoogleFonts.manrope(
-    fontSize: 14,
+    fontSize: 14.0,
     fontWeight: FontWeight.w500,
   );
   static TextStyle assistive = GoogleFonts.manrope(
-    fontSize: 12,
+    fontSize: 12.0,
     fontWeight: FontWeight.w500,
   );
 
   static TextStyle button = GoogleFonts.manrope(
-    fontSize: 16,
+    fontSize: 16.0,
     fontWeight: FontWeight.w500,
   );
   static TextStyle buttonLinks = GoogleFonts.manrope(
-    fontSize: 18,
+    fontSize: 18.0,
     fontWeight: FontWeight.w500,
   );
   static TextStyle buttonSmall = GoogleFonts.manrope(
-    fontSize: 14,
+    fontSize: 14.0,
     fontWeight: FontWeight.w500,
   );
   static TextStyle buttonExtraSmall = GoogleFonts.manrope(
-    fontSize: 12,
+    fontSize: 12.0,
     fontWeight: FontWeight.w500,
   );
 
   static TextStyle caption = GoogleFonts.manrope(
-    fontSize: 12,
+    fontSize: 12.0,
     fontWeight: FontWeight.w500,
   );
   static TextStyle overline = GoogleFonts.manrope(
-    fontSize: 10,
+    fontSize: 10.0,
     fontWeight: FontWeight.w500,
   );
 }
@@ -122,4 +122,13 @@ class MyImages {
 
   // All Mode
   static const String onBoarding = "assets/images/onboarding.png";
+}
+
+class MyIcons {
+  static const String google = "assets/icons/google.svg";
+  static const String facebook = "assets/icons/facebook.svg";
+  static const String userOutline = "assets/icons/user_outline.svg";
+  static const String lockOutline = "assets/icons/lock_outline.svg";
+  static const String eyeOutline = "assets/icons/eye_outline.svg";
+  static const String eyeSlashOutline = "assets/icons/eye_slash_outline.svg";
 }

@@ -3,7 +3,11 @@ import 'package:flutter/material.dart';
 
 class CustomImageLogo extends StatelessWidget {
   final double height;
-  const CustomImageLogo({super.key, required this.height});
+
+  const CustomImageLogo({
+    super.key,
+    required this.height,
+  });
 
   @override
   Widget build(BuildContext context) {

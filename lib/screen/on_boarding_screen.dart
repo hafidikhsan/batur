@@ -53,12 +53,12 @@ class _MainSection extends StatelessWidget {
           ),
         ),
         const SizedBox(
-          height: 30,
+          height: 30.0,
         ),
         Image.asset(
           MyImages.onBoarding,
-          width: 300,
-          height: 300,
+          width: 300.0,
+          height: 300.0,
         ),
         Text(
           AppLocalizations.of(context)!.onboardingTitle,
@@ -68,7 +68,7 @@ class _MainSection extends StatelessWidget {
               ),
         ),
         const SizedBox(
-          height: 30,
+          height: 30.0,
         ),
         Text(
           AppLocalizations.of(context)!.onboardingDesc,

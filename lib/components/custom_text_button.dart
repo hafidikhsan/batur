@@ -19,8 +19,8 @@ class CustomTextButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(8.0),
         ),
         backgroundColor: Theme.of(context).colorScheme.primary,
-        elevation: 1,
-        minimumSize: const Size(double.infinity, 48),
+        elevation: 1.0,
+        minimumSize: const Size(double.infinity, 48.0),
       ),
       child: Text(
         text,
