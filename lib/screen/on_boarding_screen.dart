@@ -1,4 +1,5 @@
 import 'package:batur/screen/settings_screen.dart';
+import 'package:batur/utils/design_system.dart';
 import 'package:flutter/material.dart';
 
 class OnBoardingScreen extends StatelessWidget {
@@ -15,6 +16,10 @@ class OnBoardingScreen extends StatelessWidget {
               children: [
                 const Text("Batur"),
                 ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    shape: const StadiumBorder(),
+                    backgroundColor: MyColors.primaryDark,
+                  ),
                   onPressed: () {
                     Navigator.push(
                       context,
