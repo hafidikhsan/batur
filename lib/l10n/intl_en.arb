@@ -1,4 +1,7 @@
 {
     "theme": "Theme",
-    "languages": "Language"
+    "languages": "Language",
+    "onboardingTitle": "Explore Bandung",
+    "onboardingDesc": "Explore the entire city of Bandung in one hand and create beautiful moments with your family and friends with the Bandung Tourism application",
+    "onboardingButton": "Start Now"
 }
