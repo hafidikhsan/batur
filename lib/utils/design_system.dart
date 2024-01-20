@@ -130,5 +130,6 @@ class MyIcons {
   static const String userOutline = "assets/icons/user_outline.svg";
   static const String lockOutline = "assets/icons/lock_outline.svg";
   static const String eyeOutline = "assets/icons/eye_outline.svg";
+  static const String mailOutline = "assets/icons/mail_outline.svg";
   static const String eyeSlashOutline = "assets/icons/eye_slash_outline.svg";
 }

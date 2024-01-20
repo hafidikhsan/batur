@@ -38,7 +38,7 @@ class CustomEmailTextField extends StatelessWidget {
         prefixIcon: Padding(
           padding: const EdgeInsets.all(17.0),
           child: SvgPicture.asset(
-            MyIcons.userOutline,
+            MyIcons.mailOutline,
             colorFilter: ColorFilter.mode(
               Theme.of(context).colorScheme.primary,
               BlendMode.srcIn,
