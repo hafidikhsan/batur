@@ -1,3 +1,4 @@
+import 'package:batur/components/custom_image_logo.dart';
 import 'package:batur/components/custom_text_button.dart';
 import 'package:batur/screen/settings_screen.dart';
 import 'package:batur/utils/design_system.dart';
@@ -45,13 +46,10 @@ class _MainSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Padding(
-          padding: const EdgeInsets.only(top: 30.0),
-          child: Image.asset(
-            Theme.of(context).brightness == Brightness.light
-                ? MyImages.appLogoLight
-                : MyImages.appLogoDark,
-            height: 40,
+        const Padding(
+          padding: EdgeInsets.only(top: 30.0),
+          child: CustomImageLogo(
+            height: 60.0,
           ),
         ),
         const SizedBox(
