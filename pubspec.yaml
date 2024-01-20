@@ -16,6 +16,7 @@ dependencies:
   intl: any
 
   cupertino_icons: ^1.0.2
+  google_fonts:
   equatable:
   flutter_bloc:
 

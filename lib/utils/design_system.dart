@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class MyColors {
   // Light Mode
@@ -22,4 +23,92 @@ class MyColors {
   static const Color successDark = Color(0xFF6CE4A0);
   static const Color warningDark = Color(0xFFF0C544);
   static const Color dangerDark = Color(0xFFDA5353);
+}
+
+class MyTextStyles {
+  static TextStyle headings1 = GoogleFonts.manrope(
+    fontSize: 48,
+    fontWeight: FontWeight.w600,
+  );
+  static TextStyle headings2 = GoogleFonts.manrope(
+    fontSize: 40,
+    fontWeight: FontWeight.w600,
+  );
+  static TextStyle headings3 = GoogleFonts.manrope(
+    fontSize: 36,
+    fontWeight: FontWeight.w600,
+  );
+  static TextStyle headings4 = GoogleFonts.manrope(
+    fontSize: 30,
+    fontWeight: FontWeight.w600,
+  );
+  static TextStyle headings5 = GoogleFonts.manrope(
+    fontSize: 24,
+    fontWeight: FontWeight.w600,
+  );
+
+  static TextStyle subtitle1 = GoogleFonts.manrope(
+    fontSize: 20,
+    fontWeight: FontWeight.w600,
+  );
+  static TextStyle subtitle2 = GoogleFonts.manrope(
+    fontSize: 18,
+    fontWeight: FontWeight.w600,
+  );
+
+  static TextStyle paragraph1 = GoogleFonts.roboto(
+    fontSize: 16,
+    fontWeight: FontWeight.w400,
+  );
+  static TextStyle paragraph2 = GoogleFonts.roboto(
+    fontSize: 14,
+    fontWeight: FontWeight.w500,
+  );
+  static TextStyle paragraph3 = GoogleFonts.manrope(
+    fontSize: 14,
+    fontWeight: FontWeight.w700,
+  );
+  static TextStyle quotes = GoogleFonts.roboto(
+    fontSize: 18,
+    fontStyle: FontStyle.italic,
+  );
+
+  static TextStyle label = GoogleFonts.manrope(
+    fontSize: 12,
+    fontWeight: FontWeight.w500,
+  );
+  static TextStyle placeholder = GoogleFonts.manrope(
+    fontSize: 14,
+    fontWeight: FontWeight.w500,
+  );
+  static TextStyle assistive = GoogleFonts.manrope(
+    fontSize: 12,
+    fontWeight: FontWeight.w500,
+  );
+
+  static TextStyle button = GoogleFonts.manrope(
+    fontSize: 16,
+    fontWeight: FontWeight.w500,
+  );
+  static TextStyle buttonLinks = GoogleFonts.manrope(
+    fontSize: 18,
+    fontWeight: FontWeight.w500,
+  );
+  static TextStyle buttonSmall = GoogleFonts.manrope(
+    fontSize: 14,
+    fontWeight: FontWeight.w500,
+  );
+  static TextStyle buttonExtraSmall = GoogleFonts.manrope(
+    fontSize: 12,
+    fontWeight: FontWeight.w500,
+  );
+
+  static TextStyle caption = GoogleFonts.manrope(
+    fontSize: 12,
+    fontWeight: FontWeight.w500,
+  );
+  static TextStyle overline = GoogleFonts.manrope(
+    fontSize: 10,
+    fontWeight: FontWeight.w500,
+  );
 }
