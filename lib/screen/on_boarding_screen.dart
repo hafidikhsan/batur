@@ -1,5 +1,6 @@
 import 'package:batur/components/custom_text_button.dart';
 import 'package:batur/screen/settings_screen.dart';
+import 'package:batur/utils/design_system.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
@@ -48,8 +49,8 @@ class _MainSection extends StatelessWidget {
           padding: const EdgeInsets.only(top: 30.0),
           child: Image.asset(
             Theme.of(context).brightness == Brightness.light
-                ? "assets/logo/logo.png"
-                : "assets/logo/logo_dark.png",
+                ? MyImages.appLogoLight
+                : MyImages.appLogoDark,
             height: 40,
           ),
         ),
@@ -57,7 +58,7 @@ class _MainSection extends StatelessWidget {
           height: 30,
         ),
         Image.asset(
-          "assets/images/onboarding.png",
+          MyImages.onBoarding,
           width: 300,
           height: 300,
         ),

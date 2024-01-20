@@ -112,3 +112,14 @@ class MyTextStyles {
     fontWeight: FontWeight.w500,
   );
 }
+
+class MyImages {
+  // Light Mode
+  static const String appLogoLight = "assets/logo/logo.png";
+
+  // Dark Mode
+  static const String appLogoDark = "assets/logo/logo_dark.png";
+
+  // All Mode
+  static const String onBoarding = "assets/images/onboarding.png";
+}
