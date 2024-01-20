@@ -3,5 +3,12 @@
     "languages": "Language",
     "onboardingTitle": "Explore Bandung",
     "onboardingDesc": "Explore the entire city of Bandung in one hand and create beautiful moments with your family and friends with the Bandung Tourism application",
-    "onboardingButton": "Start Now"
+    "onboardingButton": "Start Now",
+    "signIn": "Sign In",
+    "signInOr": "Or",
+    "signUp": "Sign Up",
+    "signInToSignUp": "Don't have an account yet? ",
+    "authMessageEmpty": "Please enter some text",
+    "authMessageEnterValidEmail": "Enter a valid email",
+    "authMessageEnterValidPassword": "Enter a valid password (6 Characters, 1 Uppercase letter, 1 Symbol)"
 }

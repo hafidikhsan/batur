@@ -3,5 +3,12 @@
     "languages": "Bahasa",
     "onboardingTitle": "Jelajahi Bandung",
     "onboardingDesc": "Jelajahi seluruh kota bandung dalam satu gengaman dan ciptakan momen indah Anda bersama keluarga dan teman-teman Anda dengan aplikasi Bandung Tourism",
-    "onboardingButton": "Mulai Sekarang"
+    "onboardingButton": "Mulai Sekarang",
+    "signIn": "Masuk",
+    "signInOr": "Atau",
+    "signUp": "Daftar",
+    "signInToSignUp": "Belum punya akun? ",
+    "authMessageEmpty": "Silakan masukkan beberapa teks",
+    "authMessageEnterValidEmail": "Masukkan email valid",
+    "authMessageEnterValidPassword": "Masukkan password valid (6 Karakter, 1 Huruf besar, 1 Simbol)"
 }

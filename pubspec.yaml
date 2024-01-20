@@ -1,5 +1,5 @@
 name: batur
-description: "A new Flutter project."
+description: "Bandung Tourism App Project."
 
 publish_to: 'none' 
 
@@ -20,6 +20,8 @@ dependencies:
   equatable:
   flutter_bloc:
   flutter_native_splash:
+  flutter_svg: 
+  tuple: 
 
 dev_dependencies:
   flutter_test:
@@ -46,6 +48,14 @@ flutter:
     - assets/logo/
     - assets/logo/logo.png
     - assets/logo/logo_dark.png
-    
+
+    - assets/icons/
+    - assets/icons/eye_outline.svg
+    - assets/icons/eye_slash_outline.svg
+    - assets/icons/lock_outline.svg
+    - assets/icons/user_outline.svg
+    - assets/icons/google.svg
+    - assets/icons/facebook.svg
+
     - assets/images/onboarding.png
   

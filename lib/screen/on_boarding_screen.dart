@@ -1,6 +1,6 @@
 import 'package:batur/components/custom_image_logo.dart';
 import 'package:batur/components/custom_text_button.dart';
-import 'package:batur/screen/settings_screen.dart';
+import 'package:batur/screen/sign_in_screen.dart';
 import 'package:batur/utils/design_system.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -28,7 +28,7 @@ class OnBoardingScreen extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const SettingScreen(),
+                      builder: (context) => const SignInScreen(),
                     ),
                   );
                 },
