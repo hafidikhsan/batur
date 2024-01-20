@@ -16,7 +16,7 @@ class OnBoardingScreen extends StatelessWidget {
           children: [
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 30.0),
-              child: _mainSection(context),
+              child: _MainSection(),
             ),
             Padding(
               padding: const EdgeInsets.all(30.0),
@@ -31,14 +31,17 @@ class OnBoardingScreen extends StatelessWidget {
                   );
                 },
               ),
-            )
+            ),
           ],
         ),
       ),
     );
   }
+}
 
-  Widget _mainSection(BuildContext context) {
+class _MainSection extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
     return Column(
       children: [
         Padding(
