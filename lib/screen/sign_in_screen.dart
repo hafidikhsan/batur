@@ -16,7 +16,7 @@ class SignInScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(
+        child: ListView(
           children: [
             const Padding(
               padding: EdgeInsets.only(top: 30.0),

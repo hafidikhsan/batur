@@ -17,24 +17,22 @@ class SignUpScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              const Padding(
-                padding: EdgeInsets.only(top: 30.0),
-                child: CustomImageLogo(
-                  height: 60.0,
-                ),
+        child: ListView(
+          children: [
+            const Padding(
+              padding: EdgeInsets.only(top: 30.0),
+              child: CustomImageLogo(
+                height: 60.0,
               ),
-              const SizedBox(
-                height: 30.0,
-              ),
-              _SignUpForm(),
-              _SignUpButton(),
-              _OtherSignUp(),
-              _ToSignIn(),
-            ],
-          ),
+            ),
+            const SizedBox(
+              height: 30.0,
+            ),
+            _SignUpForm(),
+            _SignUpButton(),
+            _OtherSignUp(),
+            _ToSignIn(),
+          ],
         ),
       ),
     );
