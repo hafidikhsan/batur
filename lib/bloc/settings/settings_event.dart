@@ -16,3 +16,12 @@ class ThemeChanged extends SettingsEvent {
   @override
   List<Object> get props => [themeType];
 }
+
+class LanguagesChanged extends SettingsEvent {
+  final LanguagesEnum languagesType;
+
+  const LanguagesChanged(this.languagesType);
+
+  @override
+  List<Object> get props => [languagesType];
+}

@@ -15,5 +15,13 @@ class SettingsBloc extends Bloc<SettingsEvent, SettingsState> {
         themeType: newTheme,
       ));
     });
+
+    on<LanguagesChanged>((event, emit) async {
+      final newLanguages = event.languagesType;
+
+      emit(state.copyWith(
+        languages: newLanguages,
+      ));
+    });
   }
 }

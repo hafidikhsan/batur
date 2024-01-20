@@ -36,7 +36,9 @@ class MyApp extends StatelessWidget {
             Locale("id", ""),
             Locale("en", ""),
           ],
-          locale: const Locale("id"),
+          locale: (state.languages == LanguagesEnum.indonesian)
+              ? const Locale("id")
+              : const Locale("en"),
           theme: lightTheme,
           darkTheme: darkTheme,
           themeMode: (state.themeType == ThemeEnum.system)

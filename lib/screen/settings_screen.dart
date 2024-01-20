@@ -14,9 +14,8 @@ class SettingScreen extends StatelessWidget {
         title: const Text("Settings"),
       ),
       body: SafeArea(
-        child: Column (
+        child: Column(
           children: [
-            Text(AppLocalizations.of(context)!.theme),
             BlocBuilder<SettingsBloc, SettingsState>(
               builder: (context, state) {
                 return Text(
@@ -39,6 +38,36 @@ class SettingScreen extends StatelessWidget {
                     return DropdownMenuItem<ThemeEnum>(
                       value: themeType,
                       child: Text(themeType.name),
+                    );
+                  }).toList(),
+                );
+              },
+            ),
+            BlocBuilder<SettingsBloc, SettingsState>(
+              builder: (context, state) {
+                return Text(
+                  "Current ${AppLocalizations.of(context)!.languages}: ${state.languages.name}",
+                  style: const TextStyle(fontSize: 24),
+                );
+              },
+            ),
+            const SizedBox(height: 16),
+            BlocBuilder<SettingsBloc, SettingsState>(
+              builder: (context, state) {
+                return DropdownButton<LanguagesEnum>(
+                  value: state.languages,
+                  onChanged: (LanguagesEnum? languagesType) {
+                    if (languagesType != null) {
+                      context
+                          .read<SettingsBloc>()
+                          .add(LanguagesChanged(languagesType));
+                    }
+                  },
+                  items:
+                      LanguagesEnum.values.map((LanguagesEnum languagesType) {
+                    return DropdownMenuItem<LanguagesEnum>(
+                      value: languagesType,
+                      child: Text(languagesType.name),
                     );
                   }).toList(),
                 );

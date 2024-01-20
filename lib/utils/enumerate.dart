@@ -3,3 +3,8 @@ enum ThemeEnum {
   light,
   system,
 }
+
+enum LanguagesEnum {
+  english,
+  indonesian,
+}
