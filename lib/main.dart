@@ -1,5 +1,7 @@
 import 'package:batur/bloc/settings/settings_bloc.dart';
 import 'package:batur/screen/on_boarding_screen.dart';
+import 'package:batur/utils/enumerate.dart';
+import 'package:batur/utils/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -19,25 +21,32 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: "Bandung Tourism",
-      debugShowCheckedModeBanner: false,
-      localizationsDelegates: const [
-        AppLocalizations.delegate,
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
-      supportedLocales: const [
-        Locale("id", ""),
-        Locale("en", ""),
-      ],
-      locale: const Locale("id"),
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const OnBoardingScreen(),
+    return BlocBuilder<SettingsBloc, SettingsState>(
+      builder: (context, state) {
+        return MaterialApp(
+          title: "Bandung Tourism",
+          debugShowCheckedModeBanner: false,
+          localizationsDelegates: const [
+            AppLocalizations.delegate,
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+          ],
+          supportedLocales: const [
+            Locale("id", ""),
+            Locale("en", ""),
+          ],
+          locale: const Locale("id"),
+          theme: lightTheme,
+          darkTheme: darkTheme,
+          themeMode: (state.themeType == ThemeEnum.system)
+              ? ThemeMode.system
+              : (state.themeType == ThemeEnum.light)
+                  ? ThemeMode.light
+                  : ThemeMode.dark,
+          home: const OnBoardingScreen(),
+        );
+      },
     );
   }
 }
