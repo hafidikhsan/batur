@@ -1,24 +1,8 @@
-// light theme
 import 'package:batur/utils/design_system.dart';
 import 'package:flutter/material.dart';
 
-ThemeData lightTheme = ThemeData(
-  brightness: Brightness.light,
-  scaffoldBackgroundColor: MyColors.backgroundLight,
-  primaryColor: MyColors.primaryLight,
-  colorScheme: const ColorScheme(
-    brightness: Brightness.light,
-    primary: MyColors.primaryLight,
-    onPrimary: MyColors.backgroundLight,
-    secondary: MyColors.secondaryLight,
-    onSecondary: MyColors.neutralLight,
-    error: MyColors.dangerLight,
-    onError: MyColors.backgroundLight,
-    background: MyColors.backgroundLight,
-    onBackground: MyColors.neutralLight,
-    surface: MyColors.backgroundLight,
-    onSurface: MyColors.neutralLight,
-  ),
+// Default theme
+ThemeData defaultTheme = ThemeData(
   textTheme: TextTheme(
     displayLarge: MyTextStyles.headings1,
     displayMedium: MyTextStyles.headings2,
@@ -38,7 +22,28 @@ ThemeData lightTheme = ThemeData(
   ),
 );
 
-ThemeData darkTheme = ThemeData(
+// Light theme
+ThemeData lightTheme = defaultTheme.copyWith(
+  brightness: Brightness.light,
+  scaffoldBackgroundColor: MyColors.backgroundLight,
+  primaryColor: MyColors.primaryLight,
+  colorScheme: const ColorScheme(
+    brightness: Brightness.light,
+    primary: MyColors.primaryLight,
+    onPrimary: MyColors.backgroundLight,
+    secondary: MyColors.secondaryLight,
+    onSecondary: MyColors.neutralLight,
+    error: MyColors.dangerLight,
+    onError: MyColors.backgroundLight,
+    background: MyColors.backgroundLight,
+    onBackground: MyColors.neutralLight,
+    surface: MyColors.backgroundLight,
+    onSurface: MyColors.neutralLight,
+  ),
+);
+
+// Dark theme
+ThemeData darkTheme = defaultTheme.copyWith(
   brightness: Brightness.dark,
   scaffoldBackgroundColor: MyColors.backgroundDark,
   primaryColor: MyColors.primaryDark,
@@ -54,22 +59,5 @@ ThemeData darkTheme = ThemeData(
     onBackground: MyColors.neutralDark,
     surface: MyColors.backgroundDark,
     onSurface: MyColors.neutralDark,
-  ),
-  textTheme: TextTheme(
-    displayLarge: MyTextStyles.headings1,
-    displayMedium: MyTextStyles.headings2,
-    displaySmall: MyTextStyles.headings2,
-    titleLarge: MyTextStyles.headings3,
-    titleMedium: MyTextStyles.headings4,
-    titleSmall: MyTextStyles.headings5,
-    headlineLarge: MyTextStyles.subtitle1,
-    headlineMedium: MyTextStyles.subtitle1,
-    headlineSmall: MyTextStyles.subtitle2,
-    bodyLarge: MyTextStyles.paragraph1,
-    bodyMedium: MyTextStyles.paragraph2,
-    bodySmall: MyTextStyles.quotes,
-    labelLarge: MyTextStyles.button,
-    labelMedium: MyTextStyles.label,
-    labelSmall: MyTextStyles.caption,
   ),
 );

@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tuple/tuple.dart';
 
-class CustomImageButton extends StatelessWidget {
+class CustomRowImageButton extends StatelessWidget {
   final List<Tuple2<String, Function()>> buttons;
 
-  const CustomImageButton({
+  const CustomRowImageButton({
     super.key,
     required this.buttons,
   });

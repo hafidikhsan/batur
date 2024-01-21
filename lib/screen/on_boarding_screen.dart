@@ -63,7 +63,7 @@ class _MainSection extends StatelessWidget {
         Text(
           AppLocalizations.of(context)!.onboardingTitle,
           style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                fontWeight: FontWeight.bold,
+                fontWeight: FontWeight.w900,
                 color: Theme.of(context).colorScheme.primary,
               ),
         ),

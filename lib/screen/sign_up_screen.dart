@@ -1,6 +1,6 @@
 import 'package:batur/components/custom_email_text_field.dart';
 import 'package:batur/components/custom_fullname_text_field.dart';
-import 'package:batur/components/custom_image_button.dart';
+import 'package:batur/components/custom_row_image_button.dart';
 import 'package:batur/components/custom_image_logo.dart';
 import 'package:batur/components/custom_password_confirm_text_field.dart';
 import 'package:batur/components/custom_password_text_field.dart';
@@ -77,8 +77,8 @@ class _SignUpForm extends StatelessWidget {
             height: 15.0,
           ),
           const CustomPasswordConfirmTextField(
-            password: '',
-            isSecure: false,
+            password: "",
+            isSecure: true,
           ),
         ],
       ),
@@ -112,7 +112,7 @@ class _OtherSignUp extends StatelessWidget {
         ),
         Padding(
           padding: const EdgeInsets.all(30.0),
-          child: CustomImageButton(
+          child: CustomRowImageButton(
             buttons: [
               Tuple2(
                 MyIcons.google,
