@@ -12,6 +12,6 @@
     "signInToSignUp": "Don't have an account yet? ",
     "signUpToSignIn": "Have an account? ",
     "authMessageEmpty": "Please enter some text",
-    "authMessageEnterValidEmail": "Enter a valid email",
+    "authMessageEnterValidEmail": "Please enter a valid email",
     "authMessageEnterValidPassword": "Enter a valid password (6 Characters, 1 Uppercase letter, 1 Symbol)"
 }

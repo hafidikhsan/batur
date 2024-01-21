@@ -1,3 +1,4 @@
+import 'package:batur/bloc/authentification/authentification_bloc.dart';
 import 'package:batur/components/custom_email_text_field.dart';
 import 'package:batur/components/custom_row_image_button.dart';
 import 'package:batur/components/custom_image_logo.dart';
@@ -6,6 +7,7 @@ import 'package:batur/components/custom_text_button.dart';
 import 'package:batur/screen/sign_up_screen.dart';
 import 'package:batur/utils/design_system.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:tuple/tuple.dart';
 
@@ -56,15 +58,38 @@ class _SignInForm extends StatelessWidget {
           const SizedBox(
             height: 15.0,
           ),
-          const CustomEmailTextField(
+          CustomEmailTextField(
             email: "",
+            onChange: (String? text) {
+              context.read<AuthentificationBloc>().add(
+                    OnEmailFormChanged(
+                      email: text!,
+                    ),
+                  );
+            },
           ),
           const SizedBox(
             height: 15.0,
           ),
-          const CustomPasswordTextField(
-            password: "",
-            isSecure: true,
+          BlocBuilder<AuthentificationBloc, AuthentificationState>(
+            builder: (context, state) {
+              return CustomPasswordTextField(
+                password: "",
+                isSecure: state.passwordDisplay,
+                onTap: () {
+                  context.read<AuthentificationBloc>().add(
+                        const OnPasswordDisplayChanged(),
+                      );
+                },
+                onChange: (String? text) {
+                  context.read<AuthentificationBloc>().add(
+                        OnPasswordFormChanged(
+                          password: text!,
+                        ),
+                      );
+                },
+              );
+            },
           ),
         ],
       ),
@@ -75,12 +100,19 @@ class _SignInForm extends StatelessWidget {
 class _SignInButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(30.0),
-      child: CustomTextButton(
-        text: AppLocalizations.of(context)!.signIn,
-        onTap: () {},
-      ),
+    return BlocBuilder<AuthentificationBloc, AuthentificationState>(
+      builder: (context, state) {
+        return Padding(
+          padding: const EdgeInsets.all(30.0),
+          child: CustomTextButton(
+            text: AppLocalizations.of(context)!.signIn,
+            onTap: () {
+              print(state.email);
+              print(state.password);
+            },
+          ),
+        );
+      },
     );
   }
 }
@@ -132,6 +164,9 @@ class _ToSignUp extends StatelessWidget {
           ),
           GestureDetector(
             onTap: () {
+              context.read<AuthentificationBloc>().add(
+                    const OnCleanForm(),
+                  );
               Navigator.push(
                 context,
                 MaterialPageRoute(

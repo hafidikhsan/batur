@@ -12,6 +12,6 @@
     "signInToSignUp": "Belum punya akun? ",
     "signUpToSignIn": "Sudah punya akun? ",
     "authMessageEmpty": "Silakan masukkan beberapa teks",
-    "authMessageEnterValidEmail": "Masukkan email valid",
+    "authMessageEnterValidEmail": "Masukkan email yang valid",
     "authMessageEnterValidPassword": "Masukkan password valid (6 Karakter, 1 Huruf besar, 1 Simbol)"
 }

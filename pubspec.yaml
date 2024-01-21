@@ -22,6 +22,11 @@ dependencies:
   flutter_native_splash:
   flutter_svg: 
   tuple: 
+  firebase_auth: 
+  firebase_core: 
+  google_sign_in:
+  dartz:
+  get_it:
 
 dev_dependencies:
   flutter_test:

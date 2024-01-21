@@ -1,16 +1,32 @@
+import 'package:batur/bloc/authentification/authentification_bloc.dart';
 import 'package:batur/bloc/settings/settings_bloc.dart';
+import 'package:batur/firebase_options.dart';
 import 'package:batur/screen/on_boarding_screen.dart';
 import 'package:batur/utils/enumerate.dart';
 import 'package:batur/utils/theme.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:batur/injection.dart' as di;
 
-void main() {
+void main() async {
+  di.init();
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(
-    BlocProvider(
-      create: (context) => SettingsBloc(),
+    MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => SettingsBloc(),
+        ),
+        BlocProvider(
+          create: (context) => di.locator<AuthentificationBloc>(),
+        ),
+      ],
       child: const MyApp(),
     ),
   );

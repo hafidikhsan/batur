@@ -1,8 +1,10 @@
+import 'package:batur/bloc/authentification/authentification_bloc.dart';
 import 'package:batur/components/custom_image_logo.dart';
 import 'package:batur/components/custom_text_button.dart';
 import 'package:batur/screen/sign_in_screen.dart';
 import 'package:batur/utils/design_system.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class OnBoardingScreen extends StatelessWidget {
@@ -25,6 +27,9 @@ class OnBoardingScreen extends StatelessWidget {
               child: CustomTextButton(
                 text: AppLocalizations.of(context)!.onboardingButton,
                 onTap: () {
+                  context.read<AuthentificationBloc>().add(
+                        const OnCleanForm(),
+                      );
                   Navigator.push(
                     context,
                     MaterialPageRoute(

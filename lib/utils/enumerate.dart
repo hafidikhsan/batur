@@ -10,3 +10,11 @@ enum LanguagesEnum {
   english,
   indonesian,
 }
+
+// Auth Enum
+enum AuthEnum {
+  init,
+  auth,
+  success,
+  failed,
+}

@@ -6,11 +6,15 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 class CustomPasswordTextField extends StatelessWidget {
   final String password;
   final bool isSecure;
+  final Function() onTap;
+  final Function(String?)? onChange;
 
   const CustomPasswordTextField({
     super.key,
     required this.password,
     required this.isSecure,
+    required this.onTap,
+    required this.onChange,
   });
 
   @override
@@ -21,7 +25,7 @@ class CustomPasswordTextField extends StatelessWidget {
       enableSuggestions: false,
       textAlignVertical: TextAlignVertical.center,
       cursorColor: Theme.of(context).colorScheme.primary,
-      keyboardType: TextInputType.emailAddress,
+      keyboardType: TextInputType.text,
       textInputAction: TextInputAction.done,
       obscureText: isSecure,
       autovalidateMode: AutovalidateMode.onUserInteraction,
@@ -47,13 +51,16 @@ class CustomPasswordTextField extends StatelessWidget {
         ),
         suffixIcon: Padding(
           padding: const EdgeInsets.all(17.0),
-          child: SvgPicture.asset(
-            isSecure ? MyIcons.eyeOutline : MyIcons.eyeSlashOutline,
-            colorFilter: ColorFilter.mode(
-              Theme.of(context).colorScheme.primary,
-              BlendMode.srcIn,
+          child: GestureDetector(
+            onTap: onTap,
+            child: SvgPicture.asset(
+              isSecure ? MyIcons.eyeOutline : MyIcons.eyeSlashOutline,
+              colorFilter: ColorFilter.mode(
+                Theme.of(context).colorScheme.primary,
+                BlendMode.srcIn,
+              ),
+              height: 24.0,
             ),
-            height: 24.0,
           ),
         ),
         border: const OutlineInputBorder(
@@ -70,10 +77,9 @@ class CustomPasswordTextField extends StatelessWidget {
             width: 2.0,
           ),
         ),
-        errorMaxLines: 1,
+        errorMaxLines: 2,
         errorStyle: Theme.of(context).textTheme.labelSmall!.copyWith(
               color: Theme.of(context).colorScheme.error,
-              overflow: TextOverflow.ellipsis,
             ),
         errorBorder: OutlineInputBorder(
           borderRadius: const BorderRadius.all(
@@ -89,8 +95,14 @@ class CustomPasswordTextField extends StatelessWidget {
         if (text == null || text.isEmpty) {
           return AppLocalizations.of(context)!.authMessageEmpty;
         }
+        if (!RegExp(
+                r"^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&+=])[A-Za-z0-9\\d$@$!%*?&]{6,}")
+            .hasMatch(text)) {
+          return AppLocalizations.of(context)!.authMessageEnterValidPassword;
+        }
         return null;
       },
+      onChanged: onChange,
     );
   }
 }

@@ -5,10 +5,12 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class CustomFullNameTextField extends StatelessWidget {
   final String fullName;
+  final Function(String?)? onChange;
 
   const CustomFullNameTextField({
     super.key,
     required this.fullName,
+    required this.onChange,
   });
 
   @override
@@ -81,6 +83,7 @@ class CustomFullNameTextField extends StatelessWidget {
         }
         return null;
       },
+      onChanged: onChange,
     );
   }
 }

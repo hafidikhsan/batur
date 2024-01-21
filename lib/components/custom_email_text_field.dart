@@ -5,10 +5,12 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class CustomEmailTextField extends StatelessWidget {
   final String email;
+  final Function(String?)? onChange;
 
   const CustomEmailTextField({
     super.key,
     required this.email,
+    required this.onChange,
   });
 
   @override
@@ -79,8 +81,14 @@ class CustomEmailTextField extends StatelessWidget {
         if (text == null || text.isEmpty) {
           return AppLocalizations.of(context)!.authMessageEmpty;
         }
+        if (!RegExp(
+                r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,}")
+            .hasMatch(text)) {
+          return AppLocalizations.of(context)!.authMessageEnterValidEmail;
+        }
         return null;
       },
+      onChanged: onChange,
     );
   }
 }

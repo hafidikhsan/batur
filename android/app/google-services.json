@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "791822441851",
+    "project_id": "batur-958b8",
+    "storage_bucket": "batur-958b8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:791822441851:android:87dedcc6aad19b158c31de",
+        "android_client_info": {
+          "package_name": "com.example.batur"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjuQGPNfqSmY44u0KDSvGFp4hwf9pMC80"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
